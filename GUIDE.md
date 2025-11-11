@@ -7,7 +7,7 @@ This guide explains how to obtain ready-to-install APKs for the Doki apps from t
 
 ## Table of contents
 
-- [Quick Tutorial](#quick-tutorial)
+- [Quick tutorial](#quick-tutorial)
 - [Quick status](#quick-status)
 - [What the workflows do (brief)](#what-the-workflows-do-brief)
 - [Workflow files explained](#workflow-files-explained)
@@ -21,7 +21,7 @@ This guide explains how to obtain ready-to-install APKs for the Doki apps from t
 - [Contributing](#contributing)
 - [License](#license)
 
-## Quick Tutorial
+## Quick tutorial
 
 Follow these quick steps if you just want a working APK with minimal fuss:
 

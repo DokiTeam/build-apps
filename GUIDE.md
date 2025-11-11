@@ -7,6 +7,7 @@ This guide explains how to obtain ready-to-install APKs for the Doki apps from t
 
 ## Table of contents
 
+- [Quick Tutorial](#quick-tutorial)
 - [Quick status](#quick-status)
 - [What the workflows do (brief)](#what-the-workflows-do-brief)
 - [Workflow files explained](#workflow-files-explained)
@@ -19,6 +20,23 @@ This guide explains how to obtain ready-to-install APKs for the Doki apps from t
 - [Recommended workflow for maintainers](#recommended-workflow-for-maintainers)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Quick Tutorial
+
+Follow these quick steps if you just want a working APK with minimal fuss:
+
+1. Create a GitHub account (if you don't have one) and fork this repository to your account.
+2. Open your fork on GitHub, go to the **Actions** tab and enable Actions for the repository if GitHub prompts you to (this is required to run workflows on forks).
+3. In the **Actions** tab choose `build_release.yml` (or `build_legacy.yml`) and click **Run workflow** to trigger a manual build. Wait for the run to complete.
+4. Open the workflow run, download the artifact (ZIP) from the **Artifacts** section, extract it, and install the APK on your device using `adb install -r <path-to-apk>`.
+
+> [!NOTE]
+> - If you need a signed release APK from CI, configure signing secrets in your fork (see the "Signing and repository secrets" section below).
+> - If you prefer not to use Actions, build locally using the Gradle wrapper: `./gradlew assembleRelease` and sign with `apksigner` as needed.
+> - If you want both release and legacy builds, run both `build_release.yml` and `build_legacy.yml` (there's a `trigger_builds.yml` helper that can run both).
+
+> [!TIP]
+> For most users the fastest path is: fork → enable Actions → run `build_release.yml` → download artifact → install via `adb`.
 
 ## Quick status
 

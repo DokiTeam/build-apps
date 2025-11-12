@@ -23,17 +23,16 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
 
-  trigger_builds:
+  build_release:
+    name: 🚀 Trigger Release Build
     needs: check
     if: needs.check.outputs.should_build == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo 🧩
-        uses: actions/checkout@v4
-        
-      - name: Trigger builds 🚀
-        run: |
-          gh workflow run build_release.yml
-          gh workflow run build_legacy.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: ./.github/workflows/build_release.yml
+    secrets: inherit
+
+  build_legacy:
+    name: 🚀 Trigger Legacy Build
+    needs: check
+    if: needs.check.outputs.should_build == 'true'
+    uses: ./.github/workflows/build_legacy.yml
+    secrets: inherit

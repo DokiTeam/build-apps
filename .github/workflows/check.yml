@@ -7,12 +7,12 @@ on:
 
 jobs:
   check:
+    name: 🌏 Check for updates
     runs-on: ubuntu-latest
     outputs:
       should_build: ${{ steps.check-updates.outputs.has_changes }}
     steps:
-      - name: Check for updates 🔍
-        id: check-updates
+      - id: check-updates
         run: |
           since=$(date -u -d "24 hours ago" +"%Y-%m-%dT%H:%M:%SZ")
           check_app=$(curl -s "https://api.github.com/repos/DokiTeam/Doki/commits?since=$since" | jq -r 'length')

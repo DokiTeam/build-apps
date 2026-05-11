@@ -1,9 +1,8 @@
 # Automation for Doki (Source code)
 
 > [!IMPORTANT]
-> We have officially moved to 夢見 [Project], you can find us [here](https://github.com/YumemiProject) (for source code).
-> Thanks to Jerry, Draken and [Yaka Team](https://github.com/YakaTeam) for helping us release that app.
-> You can find and download 夢見 [Project] at [here](https://github.com/YakaTeam/). Shout out to Yaka Team!
+> We have officially moved to **Usagi (兎)**, you can find us [here](https://github.com/UsagiApp). Usagi offers more features and freedom than Doki.
+> Thanks to [Jerry](https://github.com/JeremyChoco) for continuing to develop it. Also thanks to [Draken](https://github.com/dragonx943) for creating Doki application.
 
 ### Please give the repo a :star:
 
